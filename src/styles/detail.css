@@ -1,0 +1,158 @@
+.detail-resto {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 2rem 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.detail-title {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 3px 1rem;
+  text-align: center;
+  background: linear-gradient(to right, rgb(3, 201, 3), var(--crim));
+}
+
+.detail-info {
+  position: relative;
+}
+
+.detail-info img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.detail-info-rating {
+  position: absolute;
+  left: 0;
+  top: 120px;
+  padding: 7px 45px 7px 15px;
+  border-radius: 0 20px 20px 0;
+  background-color: var(--orange);
+}
+
+.detail-info ul {
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
+.detail-info-more .desc {
+  text-align: justify;
+  text-indent: 2rem;
+}
+
+.detail-info-more .review-list {
+  list-style-type: none;
+  padding-top: 1rem;
+}
+
+.detail-info-more .review-item {
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 0 10px 10px 10px;
+  box-shadow: 0px 0px 5px var(--hijau);
+}
+
+.detail-info-more .review-item .reviewer {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.detail-info-more .review-item p .review-date {
+  font-weight: lighter;
+  color: rgb(54, 54, 54);
+}
+
+#review-form {
+  padding: 1rem;
+}
+
+.name-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-review-form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.name-form input,
+.add-review-form textarea {
+  margin-top: 10px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--hijau);
+  box-shadow: 0px 0px 5px var(--hijau);
+  font-family: 'Rowdies', cursive;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.name-form input:focus,
+.add-review-form textarea:focus {
+  outline: 1px solid rgb(3, 201, 3);
+}
+
+.submit-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.submit-form button {
+  padding: 12px 20px;
+  font-family: 'Rowdies', cursive;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--hijau);
+  border-radius: 10px;
+  border: 1px solid var(--hijau);
+  box-shadow: 0px 0px 5px var(--hijau);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.submit-form button:hover,
+.submit-form button:active {
+  background-color: var(--hijau);
+  color: var(--crim);
+  font-weight: bolder;
+}
+
+.favorite {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--crim);
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px var(--hijau);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: 0;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+@media screen and (max-width: 768px) {
+  .detail-resto {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .detail-title {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}

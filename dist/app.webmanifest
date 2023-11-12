@@ -1,0 +1,41 @@
+{
+  "start_url": "./index.html",
+  "name": "Litak Apps",
+  "short_name": "Litak",
+  "description": "Restaurants List",
+  "display": "standalone",
+  "background_color": "#f5f3dc",
+  "theme_color": "#004225",
+  "icons": [
+    {
+      "src": "./icons/dish.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/dish-1.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/dish-2.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/dish-3.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/dish-4.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

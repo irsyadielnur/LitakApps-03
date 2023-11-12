@@ -1,0 +1,147 @@
+.sub-judul {
+  width: 100%;
+  padding: 5rem 4rem 0 4rem;
+}
+
+.sub-judul h2 {
+  color: var(--hijau);
+}
+
+.daftar-resto {
+  width: 100%;
+  min-height: 70vh;
+  padding: 1rem 4rem 3rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#fav-resto {
+  width: 100%;
+  min-height: 70vh;
+  padding: 1rem 4rem 3rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.resto-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px var(--hijau);
+  background-color: var(--pink);
+}
+
+.resto-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.resto-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  padding: 7px 0;
+}
+
+.resto-info h3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.resto-info p {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.resto-info h3,
+.resto-info p {
+  padding-left: 10px;
+}
+
+.resto-info span {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  padding-left: 20px;
+  margin-top: 5px;
+  width: 60px;
+  height: 35px;
+  font-weight: lighter;
+  display: flex;
+  border-radius: 20px 0 0 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange);
+}
+
+.resto-more {
+  text-decoration: none;
+  color: var(--hijau);
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid var(--hijau);
+  transition: 0.2s;
+}
+
+.resto-more:hover,
+.resto-more:active {
+  background-color: var(--hijau);
+  color: var(--crim);
+}
+
+@media screen and (max-width: 992px) {
+  .sub-judul {
+    width: 100%;
+    padding: 5rem 1rem 0 1rem;
+  }
+
+  .daftar-resto {
+    padding: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #fav-resto {
+    padding: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sub-judul {
+    width: 100%;
+    padding: 5rem 1rem 0 1rem;
+  }
+
+  .daftar-resto {
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #fav-resto {
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sub-judul {
+    width: 100%;
+    padding: 5rem 1rem 0 1rem;
+  }
+
+  .daftar-resto {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  #fav-resto {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,117 @@
+.appbar {
+  width: 100%;
+  height: 4rem;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--hijau);
+  box-shadow: 0px 0px 5px var(--hijau);
+  position: fixed;
+  z-index: 50;
+}
+
+.appbar-logo {
+  color: var(--crim);
+  font-size: 28px;
+  letter-spacing: 5px;
+}
+
+.appbar-menu {
+  display: flex;
+  list-style: none;
+}
+
+.appbar-item {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  padding: 10px 15px;
+  color: var(--crim);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.appbar-item:hover {
+  color: var(--hijau);
+}
+
+.appbar-item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--orange);
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.appbar-item:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.burger {
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 44px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: var(--crim);
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .appbar-logo {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .appbar {
+    padding: 0 2rem;
+  }
+
+  .appbar-logo {
+    font-size: 23px;
+  }
+
+  .appbar-menu {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: var(--hijau);
+    top: 3.5rem;
+    right: 0;
+    display: inline-block;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  .appbar-menu li {
+    margin: 2rem 0;
+    padding: 2px;
+    border-bottom: 1px solid var(--crim);
+  }
+
+  .appbar-item {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .appbar-menu.open {
+    transform: translateX(0%);
+  }
+
+  .burger {
+    display: block;
+  }
+}
